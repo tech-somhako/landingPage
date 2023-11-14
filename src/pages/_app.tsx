@@ -13,10 +13,19 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useLangStore } from "@/utils/code";
 import GTMProvider from "@/components/noAuth/GTMProvider";
+import { initGA, logPageView } from "../utils/analytics";
 
 function App({ Component, pageProps: { session, ...pageProps } }: any) {
 	const { t } = useTranslation("common");
 	const srcLang = useLangStore((state: { lang: any }) => state.lang);
+	useEffect(() => {
+		if (!window.GA_INITIALIZED) {
+			initGA();
+			window.GA_INITIALIZED = true;
+		}
+		logPageView();
+	}, []);
+
 	useEffect(() => {
 		const handleRouteStart = () => NProgress.start();
 		const handleRouteDone = () => NProgress.done();
