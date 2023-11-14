@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 import { useLangStore } from "@/utils/code";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function Document() {
 	const srcLang = useLangStore((state: { lang: any }) => state.lang);
@@ -39,6 +40,7 @@ export default function Document() {
 				<Main />
 				<NextScript />
 			</body>
+			<GoogleTagManager gtmId="GTM-MH7C7N6L" />
 		</Html>
 	);
 }
