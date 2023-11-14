@@ -103,7 +103,6 @@ function App({ Component, pageProps: { session, ...pageProps } }: any) {
 						</title>
 					</Head>
 					<Component {...pageProps} />
-					<Analytics />
 				</SessionProvider>
 			</ThemeProvider>
 			<Analytics />
