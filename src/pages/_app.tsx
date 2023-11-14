@@ -12,6 +12,7 @@ import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useLangStore } from "@/utils/code";
+import GTMProvider from "@/components/noAuth/GTMProvider";
 
 function App({ Component, pageProps: { session, ...pageProps } }: any) {
 	const { t } = useTranslation("common");
@@ -102,7 +103,9 @@ function App({ Component, pageProps: { session, ...pageProps } }: any) {
 								: 'AI-based Recruitment Management System "Somhako”'}
 						</title>
 					</Head>
-					<Component {...pageProps} />
+					<GTMProvider containerId="GTM-MH7C7N6L">
+						<Component {...pageProps} />
+					</GTMProvider>
 				</SessionProvider>
 			</ThemeProvider>
 			<Analytics />
