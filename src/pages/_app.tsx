@@ -91,9 +91,9 @@ function App({ Component, pageProps: { session, ...pageProps } }: any) {
 
 						<meta name="og:type" content="website" />
 
-						<meta name="og:url" content="http://ats.somhako.com/home" />
+						<meta name="og:url" content="http://somhako.com" />
 
-						<meta name="og:image" content="https://ats.somhako.com/images/noAuth/headerLogo.png" />
+						<meta name="og:image" content="https://somhako.com/images/noAuth/headerLogo.png" />
 
 						<meta name="og:site_name" content="Somhako" />
 

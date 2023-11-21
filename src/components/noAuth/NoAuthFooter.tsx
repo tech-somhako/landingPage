@@ -39,7 +39,8 @@ export default function noAuthFooter({ setbookADemo }: any) {
 
 	function handleClick(title: any) {
 		if (title === "応募者トラッキング" || title === "Applicant Tracking") {
-			router.push("https://ats.somhako.com/auth/signin");
+			// router.push("https://ats.somhako.com/auth/signin");
+			setbookADemo(true);
 		} else if (title === "会社概要" || title === "Company") {
 			router.push("/");
 		} else if (title === "ブログ" || title === "Blogs") {

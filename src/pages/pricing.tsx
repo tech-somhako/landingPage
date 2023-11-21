@@ -72,9 +72,7 @@ export default function PricingPage() {
 									<div className="mx-auto">
 										<button
 											className="transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-											onClick={() => {
-												router.push("https://ats.somhako.com/auth/signup");
-											}}
+											onClick={() => setbookADemo(true)}
 										>
 											{srcLang === "ja" ? "無料トライアルを開始する" : "Start your FREE trial"}
 										</button>
@@ -163,9 +161,7 @@ export default function PricingPage() {
 											</div>
 											<button
 												className="mt-4 transform rounded-normal bg-gradient-to-r from-gray-400 to-gray-600 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-gray-500 hover:to-gray-700 hover:brightness-110 active:animate-bounce"
-												onClick={() => {
-													router.push("https://ats.somhako.com/auth/signup");
-												}}
+												onClick={() => setbookADemo(true)}
 											>
 												{srcLang === "ja" ? "今すぐ無料トライアルを！" : "Get FREE trial now"}
 											</button>
@@ -206,14 +202,9 @@ export default function PricingPage() {
 											}}
 										>
 											<ul className="list-disc  px-4">
-												<li>{srcLang === "ja" ? "最大10名" : "10 members "}</li>
+												<li>{srcLang === "ja" ? "最大5名" : "5 members "}</li>
 												<li>{srcLang === "ja" ? "ベンダー管理" : "Vendor management"}</li>
 												<li>{srcLang === "ja" ? "内蔵チャット" : "internal chat "}</li>
-												<li>
-													{srcLang === "ja"
-														? "グーグルカレンダー統合と手動スケジュール設定"
-														: "Googlecalendar intergration "}
-												</li>
 												<li>{srcLang === "ja" ? "キャリアページ" : "Career page "}</li>
 												<li>{srcLang === "ja" ? "応募者カンバン" : "Applicant kanban"}</li>
 												<li>{srcLang === "ja" ? "手動ワークフローシステム" : "Manual workflow system"}</li>
@@ -435,9 +426,7 @@ export default function PricingPage() {
 											</div>
 											<button
 												className="mt-4 transform rounded-normal bg-gradient-to-r from-gray-400 to-gray-600 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-gray-500 hover:to-gray-700 hover:brightness-110 active:animate-bounce"
-												onClick={() => {
-													router.push("https://ats.somhako.com/auth/signup");
-												}}
+												onClick={() => setbookADemo(true)}
 											>
 												{srcLang === "ja" ? "今すぐ無料トライアルを！" : "Get FREE trial now"}
 											</button>
@@ -654,20 +643,15 @@ export default function PricingPage() {
 											</ul>
 										</div>
 										<div
-											className="flex w-[70%] items-center justify-center   bg-white px-4 py-8 text-base font-[300] text-black"
+											className="flex w-[70%] h-full items-center justify-center   bg-white px-4 py-8 text-base font-[300] text-black"
 											style={{
 												filter: "drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25))"
 											}}
 										>
 											<ul className="list-disc px-4">
-												<li>{srcLang === "ja" ? "最大10名" : "10 members "}</li>
+												<li>{srcLang === "ja" ? "最大5名" : "5 members "}</li>
 												<li>{srcLang === "ja" ? "ベンダー管理" : "Vendor management"}</li>
 												<li>{srcLang === "ja" ? "内蔵チャット" : "internal chat "}</li>
-												<li>
-													{srcLang === "ja"
-														? "グーグルカレンダー統合と手動スケジュール設定"
-														: "Googlecalendar intergration "}
-												</li>
 												<li>{srcLang === "ja" ? "キャリアページ" : "Career page "}</li>
 												<li>{srcLang === "ja" ? "応募者カンバン" : "Applicant kanban"}</li>
 												<li>{srcLang === "ja" ? "手動ワークフローシステム" : "Manual workflow system"}</li>
@@ -711,9 +695,7 @@ export default function PricingPage() {
 										</span>
 										<button
 											className="mt-4 transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-											onClick={() => {
-												router.push("https://ats.somhako.com/auth/signup");
-											}}
+											onClick={() => setbookADemo(true)}
 										>
 											{srcLang === "ja" ? "30日間トライアル開始 " : "Start a 30-day trial"}
 										</button>

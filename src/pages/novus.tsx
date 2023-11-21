@@ -99,9 +99,7 @@ export default function Novus() {
 										<div className="z-10 flex justify-start  pt-8  text-white max-md:justify-center max-md:pt-4">
 											<button
 												className="transform rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-												onClick={() => {
-													router.push("https://ats.somhako.com/auth/signup");
-												}}
+												onClick={() => setbookADemo(true)}
 											>
 												{t("Noauth.novus.btn1")}
 											</button>
