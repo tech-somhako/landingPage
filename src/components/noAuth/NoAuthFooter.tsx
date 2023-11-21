@@ -52,7 +52,7 @@ export default function noAuthFooter({ setbookADemo }: any) {
 		} else if (title === "利用規約" || title === "User Agreement") {
 			router.push("/user-agreement");
 		} else if (title === "ご利用条件" || title === "Terms & Conditions") {
-			router.push("/t&c");
+			router.push("/terms-conditions");
 		}
 	}
 
