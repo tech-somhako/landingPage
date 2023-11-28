@@ -34,6 +34,22 @@ export default function PricingPage() {
 		<>
 			<Head>
 				<title>Pricing Page ATS</title>
+				<script
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+					page_path: window.location.pathname,
+				});
+				`
+					}}
+				/>
 			</Head>
 			<main>
 				<NoAuthHeader scrollTop={scrollTop} setbookADemo={setbookADemo} />
@@ -643,7 +659,7 @@ export default function PricingPage() {
 											</ul>
 										</div>
 										<div
-											className="flex w-[70%] h-full items-center justify-center   bg-white px-4 py-8 text-base font-[300] text-black"
+											className="flex h-full w-[70%] items-center justify-center   bg-white px-4 py-8 text-base font-[300] text-black"
 											style={{
 												filter: "drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.25))"
 											}}

@@ -12,19 +12,19 @@ import { appWithTranslation } from "next-i18next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useLangStore } from "@/utils/code";
-import { initGA, logPageView } from "../utils/analytics";
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { initGA, logPageView } from "../utils/analytics";
+// import { GoogleTagManager } from "@next/third-parties/google";
 
 function App({ Component, pageProps: { session, ...pageProps } }: any) {
 	const { t } = useTranslation("common");
 	const srcLang = useLangStore((state: { lang: any }) => state.lang);
-	useEffect(() => {
-		if (!window.GA_INITIALIZED) {
-			initGA();
-			window.GA_INITIALIZED = true;
-		}
-		logPageView();
-	}, []);
+	// useEffect(() => {
+	// 	if (!window.GA_INITIALIZED) {
+	// 		initGA();
+	// 		window.GA_INITIALIZED = true;
+	// 	}
+	// 	logPageView();
+	// }, []);
 
 	useEffect(() => {
 		const handleRouteStart = () => NProgress.start();
@@ -113,7 +113,7 @@ function App({ Component, pageProps: { session, ...pageProps } }: any) {
 						</title>
 					</Head>
 					<Component {...pageProps} />
-					<GoogleTagManager gtmId="GTM-MH7C7N6L" />
+					{/* <GoogleTagManager gtmId="GTM-MH7C7N6L" /> */}
 				</SessionProvider>
 			</ThemeProvider>
 			<Analytics />

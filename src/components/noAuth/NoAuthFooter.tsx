@@ -42,7 +42,7 @@ export default function noAuthFooter({ setbookADemo }: any) {
 			// router.push("https://ats.somhako.com/auth/signin");
 			setbookADemo(true);
 		} else if (title === "会社概要" || title === "Company") {
-			router.push("/");
+			router.push("https://advantf.com/");
 		} else if (title === "ブログ" || title === "Blogs") {
 			router.push("/blogs");
 		} else if (title === "デモを予約する" || title === "Book A Demo") {
