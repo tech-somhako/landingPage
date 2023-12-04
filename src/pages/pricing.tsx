@@ -27,7 +27,7 @@ export default function PricingPage() {
 	}, [scrollTop]);
 
 	const [bookADemo, setbookADemo] = useState(false);
-	const [enabled, setEnabled] = useState(false);
+	const [enabled, setEnabled] = useState(true);
 
 	const router = useRouter();
 
@@ -96,8 +96,8 @@ export default function PricingPage() {
 									</div>
 								</div>
 
-								<div className="my-[4rem] flex h-auto w-fit flex-col gap-10 rounded-normal  bg-white p-10 max-xl:gap-x-2 max-xl:px-4">
-									{/* small device */}
+								{/* <div className="my-[4rem] flex h-auto w-fit flex-col gap-10 rounded-normal  bg-white p-10 max-xl:gap-x-2 max-xl:px-4">
+									
 
 									<div className="flex items-center justify-evenly gap-4 max-sm:flex-col xl:hidden">
 										<div className="flex w-[50%] flex-col gap-2  px-8  pb-8 text-base font-[300] text-black max-sm:w-full ">
@@ -384,7 +384,7 @@ export default function PricingPage() {
 										</div>
 									</div>
 
-									{/* big device */}
+									
 									<div className="grid grid-cols-3  place-content-around items-end justify-items-center gap-x-6 gap-y-2  max-xl:hidden ">
 										<div className="flex w-full flex-col gap-2   px-8 pb-8 text-base font-[300] text-black">
 											<span className="mx-auto mt-4 text-5xl font-bold">
@@ -666,7 +666,7 @@ export default function PricingPage() {
 										</div>
 									</div>
 
-									{/* end	*/}
+									
 									<div className="flex w-full flex-col items-center justify-center">
 										<span className="text-center">
 											{srcLang === "ja"
@@ -686,6 +686,374 @@ export default function PricingPage() {
 											</span>
 										</p>
 									</div>
+								</div> */}
+								<div className="my-[4rem] h-auto rounded-normal bg-white p-10  max-xl:px-4">
+									<div className="mx-auto flex w-fit items-center gap-2 rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg">
+										<span className={`text-base ${enabled && "font-extra-bold"}`}>
+											{srcLang === "ja" ? "毎月" : "Monthly"}
+										</span>
+										<Switch
+											checked={enabled}
+											onChange={setEnabled}
+											className={`${!enabled ? "bg-white" : "bg-gray-200"}
+          relative inline-flex h-[16px] w-[32px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white/75`}
+										>
+											<span className="sr-only">Use setting</span>
+											<span
+												aria-hidden="true"
+												className={`${!enabled ? "translate-x-4" : "translate-x-0"}
+            pointer-events-none transform shadow-lg transition duration-200 ease-in-out`}
+											>
+												<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 12 12" fill="none">
+													<ellipse cx="6" cy="5.6875" rx="6" ry="5.5" fill="url(#paint0_linear_2283_2614)" />
+													<defs>
+														<linearGradient
+															id="paint0_linear_2283_2614"
+															x1="-1.47881"
+															y1="9.72058"
+															x2="16.3365"
+															y2="2.58971"
+															gradientUnits="userSpaceOnUse"
+														>
+															<stop stop-color="#2D129A" />
+															<stop offset="1" stop-color="#47BBFD" />
+														</linearGradient>
+													</defs>
+												</svg>
+											</span>
+										</Switch>
+										<span className={`text-base ${!enabled && "font-extra-bold"}`}>
+											{srcLang === "ja" ? "毎年" : "Annually"}
+										</span>
+									</div>
+									<div className="mt-[4rem] grid h-auto w-full  grid-cols-1 gap-4 max-xl:gap-x-2 max-xl:px-4 md:grid-cols-4">
+										<div className="gradient-blur rounded-lg p-4 shadow-md">
+											<h2 className="mb-4 text-lg font-semibold">Free Trial</h2>
+											<p className="mb-4 text-2xl font-bold">
+												&#165;0 <span className="text-sm font-normal">only 30 Days</span>
+											</p>
+											<p className="mb-6">Explore the product</p>
+											<ul className="mb-6">
+												<li>No any limit</li>
+												<li>AI Based TA opeations</li>
+												<li>Upto 100 applicants</li>
+											</ul>
+											<button
+												className="w-full transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
+												onClick={() => setbookADemo(true)}
+											>
+												Take a free trial
+											</button>
+										</div>
+
+										<div className="rounded-l p-4 shadow-md">
+											<h2 className="mb-4 text-lg font-semibold">Starter</h2>
+											<p className="mb-4 text-2xl font-bold">
+												{enabled ? (
+													<>
+														{" "}
+														&#165;5,000 <span className="text-sm font-normal">per month</span>
+													</>
+												) : (
+													<>
+														{" "}
+														&#165;60,000 <span className="text-sm font-normal">per annum</span>
+													</>
+												)}
+											</p>
+											<p className="mb-6">Boost productivity</p>
+											<ul className="mb-6">
+												<li>Up to 7 team members</li>
+												<li>Up to 3 agency contracts</li>
+												<li>Up to 5 jobs</li>
+											</ul>
+											<button
+												className="w-full transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
+												onClick={() => setbookADemo(true)}
+											>
+												Get started
+											</button>
+										</div>
+
+										<div className="gradient-blur rounded-xl bg-blue-500 p-4  text-white shadow-lg shadow-blue-400">
+											<h2 className="mb-4 text-lg font-semibold">Standard</h2>
+											<p className="mb-4 text-2xl font-bold">
+												{enabled ? (
+													<>
+														{" "}
+														&#165;17,500 <span className="text-sm font-normal">per month</span>
+													</>
+												) : (
+													<>
+														{" "}
+														&#165;2,10,000 <span className="text-sm font-normal">per annum</span>
+													</>
+												)}
+											</p>
+											<p className="mb-6">Get max efficiency</p>
+											<ul className="mb-6">
+												<li>Up to 10 team members</li>
+												<li>Up to 5 agency contracts</li>
+												<li>Up to 10 jobs</li>
+											</ul>
+											<button
+												className="w-full transform rounded-normal bg-gradient-to-r from-white to-white/[0.85] px-8 py-3 tracking-wide text-blue-500 shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-white hover:to-white/[0.8] hover:brightness-110 active:animate-bounce"
+												onClick={() => setbookADemo(true)}
+											>
+												Get started
+											</button>
+											{/* <button className="w-full rounded-md bg-white py-2 text-blue-500">Get started</button> */}
+										</div>
+
+										<div className="gradient-blur rounded-lg p-4 shadow-md">
+											<h2 className="mb-4 text-lg font-semibold">Enterprise</h2>
+											<p className="mb-4 text-2xl font-bold">
+												Custom <span className="text-sm font-normal">individual payment</span>
+											</p>
+											<p className="mb-6">Become unique</p>
+											<ul className="mb-6">
+												<li>No any limit</li>
+												<li>AI Based TA opeations</li>
+												<li>Reduce recruitment TAT</li>
+											</ul>
+											<button
+												className="w-full transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
+												onClick={() => setbookADemo(true)}
+											>
+												Request a call
+											</button>
+										</div>
+									</div>
+								</div>
+
+								{/* plan comp */}
+								<div className="flex flex-col justify-center gap-4">
+									<div className="w-full text-center text-[2vw] font-bold text-white max-xl:text-[3.3vw] max-md:text-[4vw]">
+										{srcLang === "ja" ? "機能豊富なプランは、透明性のある価格設定となっている" : "Plan comparison"}
+									</div>
+								</div>
+
+								<div className="my-[2rem] h-auto rounded-normal bg-white p-10  max-xl:px-4">
+									<table cellPadding={"0"} cellSpacing={"0"} className="w-full">
+										<thead>
+											<tr>
+												<th className="w-[300px] border-b px-3 py-2"></th>
+												<th className="border-b px-3 py-2">Free Trial</th>
+												<th className="border-b px-3 py-2">Starter</th>
+												<th className="border-b px-3 py-2">Standard</th>
+												<th className="border-b px-3 py-2">Enterprise</th>
+											</tr>
+										</thead>
+										<tbody className="text-sm font-semibold">
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Novus AI HR Assistant</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Plan Duration</td>
+												<td className="px-3 py-2 text-center">Only 30 Days</td>
+												<td className="px-3 py-2 text-center">Monthly / Yearly</td>
+												<td className="px-3 py-2 text-center">Monthly / Yearly</td>
+												<td className="px-3 py-2 text-center">Monthly / Yearly</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Team Members</td>
+												<td className="px-3 py-2 text-center">Unlimited</td>
+												<td className="px-3 py-2 text-center">Up to 7</td>
+												<td className="px-3 py-2 text-center">Up to 10</td>
+												<td className="px-3 py-2 text-center">Unlimited</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Vendors/Agency Contracts</td>
+												<td className="px-3 py-2 text-center">Up to 2</td>
+												<td className="px-3 py-2 text-center">Up to 3</td>
+												<td className="px-3 py-2 text-center">Up to 5</td>
+												<td className="px-3 py-2 text-center">Unlimited</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Publish/Active Jobs</td>
+												<td className="px-3 py-2 text-center">Up to 2</td>
+												<td className="px-3 py-2 text-center">Up to 5</td>
+												<td className="px-3 py-2 text-center">Up to 10</td>
+												<td className="px-3 py-2 text-center">Unlimited</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Application</td>
+												<td className="px-3 py-2 text-center">Up to 100</td>
+												<td className="px-3 py-2 text-center">80 / 1000</td>
+												<td className="px-3 py-2 text-center">240 / 3000</td>
+												<td className="px-3 py-2 text-center">Flexible</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Calendar & Interview</td>
+												<td className="px-3 py-2 text-center">Automate & Manual</td>
+												<td className="px-3 py-2 text-center">Manual</td>
+												<td className="px-3 py-2 text-center">Manual</td>
+												<td className="px-3 py-2 text-center">Automate & Manual</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Custimize Dashboard</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Offer Management</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">AI Generated Job Description</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">AI Generated Application Rating</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">AI Generated Interview Questions</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Internal Communication</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-xmark"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Analytics</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Career & Widget</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+
+											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+												<td className="w-[300px] px-3 py-2">Application Kanban Board</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+												<td className="px-3 py-2 text-center">
+													<i className="fa-solid fa-check"></i>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
