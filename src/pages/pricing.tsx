@@ -829,7 +829,7 @@ export default function PricingPage() {
 								{/* plan comp */}
 								<div className="flex flex-col justify-center gap-4">
 									<div className="w-full text-center text-[2vw] font-bold text-white max-xl:text-[3.3vw] max-md:text-[4vw]">
-										{srcLang === "ja" ? "機能豊富なプランは、透明性のある価格設定となっている" : "Plan comparison"}
+										Plan comparison
 									</div>
 								</div>
 
