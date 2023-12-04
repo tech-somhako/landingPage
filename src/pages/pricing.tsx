@@ -726,7 +726,7 @@ export default function PricingPage() {
 											{srcLang === "ja" ? "毎年" : "Annually"}
 										</span>
 									</div>
-									<div className="mt-[4rem] grid h-auto w-full  grid-cols-1 gap-4 max-xl:gap-x-2 max-xl:px-4 md:grid-cols-4">
+									<div className="mt-[4rem] grid h-auto w-full grid-cols-1 gap-4 text-black max-xl:gap-x-2 max-xl:px-4 md:grid-cols-4">
 										<div className="gradient-blur rounded-lg p-4 shadow-md">
 											<h2 className="mb-4 text-lg font-semibold">Free Trial</h2>
 											<p className="mb-4 text-2xl font-bold">
@@ -833,7 +833,7 @@ export default function PricingPage() {
 									</div>
 								</div>
 
-								<div className="my-[2rem] h-auto rounded-normal bg-white p-10  max-xl:px-4">
+								<div className="my-[2rem] h-auto rounded-normal bg-white p-10 text-black  max-xl:px-4">
 									<table cellPadding={"0"} cellSpacing={"0"} className="w-full">
 										<thead>
 											<tr>
@@ -845,7 +845,7 @@ export default function PricingPage() {
 											</tr>
 										</thead>
 										<tbody className="text-sm font-semibold">
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Novus AI HR Assistant</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -861,7 +861,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Plan Duration</td>
 												<td className="px-3 py-2 text-center">Only 30 Days</td>
 												<td className="px-3 py-2 text-center">Monthly / Yearly</td>
@@ -869,7 +869,7 @@ export default function PricingPage() {
 												<td className="px-3 py-2 text-center">Monthly / Yearly</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Team Members</td>
 												<td className="px-3 py-2 text-center">Unlimited</td>
 												<td className="px-3 py-2 text-center">Up to 7</td>
@@ -877,7 +877,7 @@ export default function PricingPage() {
 												<td className="px-3 py-2 text-center">Unlimited</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Vendors/Agency Contracts</td>
 												<td className="px-3 py-2 text-center">Up to 2</td>
 												<td className="px-3 py-2 text-center">Up to 3</td>
@@ -885,7 +885,7 @@ export default function PricingPage() {
 												<td className="px-3 py-2 text-center">Unlimited</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Publish/Active Jobs</td>
 												<td className="px-3 py-2 text-center">Up to 2</td>
 												<td className="px-3 py-2 text-center">Up to 5</td>
@@ -893,7 +893,7 @@ export default function PricingPage() {
 												<td className="px-3 py-2 text-center">Unlimited</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Application</td>
 												<td className="px-3 py-2 text-center">Up to 100</td>
 												<td className="px-3 py-2 text-center">80 / 1000</td>
@@ -901,7 +901,7 @@ export default function PricingPage() {
 												<td className="px-3 py-2 text-center">Flexible</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Calendar & Interview</td>
 												<td className="px-3 py-2 text-center">Automate & Manual</td>
 												<td className="px-3 py-2 text-center">Manual</td>
@@ -909,7 +909,7 @@ export default function PricingPage() {
 												<td className="px-3 py-2 text-center">Automate & Manual</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Custimize Dashboard</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -925,7 +925,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Offer Management</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -941,7 +941,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">AI Generated Job Description</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -957,7 +957,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">AI Generated Application Rating</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -973,7 +973,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">AI Generated Interview Questions</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -989,7 +989,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Internal Communication</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -1005,7 +1005,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Analytics</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -1021,7 +1021,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Career & Widget</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
@@ -1037,7 +1037,7 @@ export default function PricingPage() {
 												</td>
 											</tr>
 
-											<tr className="odd:bg-gray-100 dark:odd:bg-gray-600">
+											<tr className="odd:bg-gray-100">
 												<td className="w-[300px] px-3 py-2">Application Kanban Board</td>
 												<td className="px-3 py-2 text-center">
 													<i className="fa-solid fa-check"></i>
