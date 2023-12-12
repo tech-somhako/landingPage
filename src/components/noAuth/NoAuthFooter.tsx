@@ -23,7 +23,7 @@ export default function noAuthFooter({ setbookADemo }: any) {
 			title: srcLang === "ja" ? "について" : "About",
 			items: [
 				srcLang === "ja" ? "会社概要" : "Company",
-				srcLang === "ja" ? "ブログ" : "Blogs",
+				// srcLang === "ja" ? "ブログ" : "Blogs",
 				srcLang === "ja" ? "デモを予約する" : "Book A Demo"
 			]
 		},
