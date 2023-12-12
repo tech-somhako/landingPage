@@ -102,7 +102,7 @@ export default function noAuthHeader({ scrollTop, setbookADemo }: any) {
 						>
 							{srcLang === "ja" ? "価格" : "Pricing"}
 						</Link>
-						<Link
+						{/* <Link
 							href="/blogs"
 							className={
 								"my-auto mb-4 block w-fit max-lg:mx-auto lg:mb-0 lg:mt-0" +
@@ -111,7 +111,7 @@ export default function noAuthHeader({ scrollTop, setbookADemo }: any) {
 							}
 						>
 							{srcLang === "ja" ? "ブログ" : "Blogs"}
-						</Link>
+						</Link> */}
 						<div className="ml-[4rem]  max-lg:ml-0 max-lg:mt-[4rem] max-lg:flex max-lg:w-full max-lg:justify-center">
 							<button
 								className=" transform rounded-full bg-gradient-to-r from-blue-600 to-blue-800 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce "
