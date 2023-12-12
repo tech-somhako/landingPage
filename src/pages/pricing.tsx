@@ -833,7 +833,7 @@ export default function PricingPage() {
 									</div>
 								</div>
 
-								<div className="my-[2rem] h-auto rounded-normal bg-white p-10 text-black  max-xl:px-4">
+								<div className="my-[2rem] h-auto rounded-normal bg-white p-10 text-black  max-xl:px-4 max-md:scale-[.80] max-sm:scale-[.60]">
 									<table cellPadding={"0"} cellSpacing={"0"} className="w-full">
 										<thead>
 											<tr>

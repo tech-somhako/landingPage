@@ -1515,3 +1515,37 @@ button:hover .button-text {
 	counter-increment: foo;
 	content: "11." counter(foo) " ";
 }
+
+.blogContent > * {
+	padding: 1rem 2rem;
+}
+
+.blogContent img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.blogContent h1 {
+	font-size: larger;
+	font-weight: 700;
+}
+
+.blogContent h2 {
+	font-size: large;
+	font-weight: 600;
+}
+
+.blogContent p {
+	font-size: small;
+	font-weight: 400;
+}
+
+.blogContent h3 {
+	font-size: medium;
+	font-weight: 500;
+}
+
+.blogContent small {
+	font-size: smaller;
+	font-weight: 300;
+}

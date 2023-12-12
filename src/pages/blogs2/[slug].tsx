@@ -204,7 +204,7 @@ export default function BlogsPage() {
 										/>
 									</div>
 
-									<div className="content" dangerouslySetInnerHTML={{ __html: blogDetail.description }}></div>
+									<div className="blogContent" dangerouslySetInnerHTML={{ __html: blogDetail.description }}></div>
 
 									<span className="inline-flex items-center rounded border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-gray-700 dark:text-blue-400">
 										<svg
