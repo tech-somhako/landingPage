@@ -7,12 +7,12 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { axiosInstance } from "./api/axiosApi";
+import { axiosInstance, axiosInstance2 } from "../api/axiosApi";
 import Link from "next/link";
 import ToggleLang from "@/components/noAuth/ToggleLang";
 import { useLangStore } from "@/utils/code";
 import BookADemo from "@/components/noAuth/BookADemo";
-import { axiosInstance2 } from "./api/axiosApi";
+import { useRouter } from "next/router";
 
 export default function BlogsPage() {
 	const srcLang = useLangStore((state: { lang: any }) => state.lang);
@@ -102,6 +102,8 @@ export default function BlogsPage() {
 	}, [state]);
 	const [bookADemo, setbookADemo] = useState(false);
 
+	const router = useRouter();
+
 	return (
 		<>
 			<Head>
@@ -152,8 +154,8 @@ export default function BlogsPage() {
 							<div className="mt-[-16rem] flex h-auto w-[60vw] flex-row flex-wrap items-center justify-center gap-8 rounded  bg-white p-4  px-12 shadow-lg max-lg:h-auto max-lg:min-h-fit max-lg:w-[90vw] max-md:mt-[-8rem] max-md:flex-col max-md:p-2">
 								{publogs && publogs.length > 0 && (
 									<div className="h-auto w-full   p-8 max-lg:p-4 max-lg:pb-[4rem] max-md:p-2 max-md:pb-[4rem]">
-										<p className="w-full text-center text-3xl font-semibold tracking-[6.4px]">
-											{srcLang === "ja" ? "ソーシャルフォローで最新情報をチェック" : "Latest updates"}
+										<p className="mx-auto w-full p-3 text-center text-3xl font-semibold tracking-[6.4px]">
+											{srcLang === "ja" ? "最新情報" : "Latest updates"}
 										</p>
 										<Slider {...settings}>
 											{publogs.map((data, i) => (
@@ -179,7 +181,7 @@ export default function BlogsPage() {
 															<h3 className="w-[100%] truncate text-xl font-semibold text-gray-800 md:text-2xl">
 																{data.title}
 															</h3>
-															<Link href={"#"} target="_blank" className="text-[#2D129A] hover:underline">
+															<Link href={`/blogs/${data.slug}`} className="text-[#2D129A] hover:underline">
 																read more
 															</Link>
 														</div>
@@ -221,63 +223,63 @@ export default function BlogsPage() {
 									</div>
 								)}
 
-								<div>
-									<button
-										className="transform rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-3 py-1 text-[10px] tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-										// onClick={() => setbookADemo(true)}
-									>
-										Explore more blogs
-									</button>
-								</div>
-
 								{poblogs.length > 0 || publogs.length > 0 ? (
-									<div className="flex w-full flex-col items-center justify-center gap-4 ">
-										<div className="flex items-center justify-center gap-4 text-lg text-black">
-											<Link
-												href="https://www.linkedin.com/company/somhakoo/"
-												target="_blank"
-												className="opacity-80 transition-opacity hover:opacity-100"
-											>
-												<i className="fa-brands fa-linkedin"></i>
-											</Link>
-											<Link
-												href="https://twitter.com/somhako"
-												target="_blank"
-												className="my-auto opacity-80 transition-opacity hover:opacity-100"
-											>
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													height="1rem"
-													viewBox="0 0 512 512"
-													className="fill-black"
-												>
-													<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-												</svg>
-											</Link>
-											<Link
-												href="https://medium.com/@somhako"
-												target="_blank"
-												className="opacity-80 transition-opacity hover:opacity-100"
-											>
-												<i className="fa-brands fa-medium"></i>
-											</Link>
-											<Link
-												href="https://www.facebook.com/Somhako"
-												target="_blank"
-												className="opacity-80 transition-opacity hover:opacity-100"
-											>
-												<i className="fa-brands fa-facebook"></i>
-											</Link>
-										</div>
-										<p className="w-[80%] text-center text-3xl font-semibold tracking-[6.4px]">
-											{srcLang === "ja"
-												? "ソーシャルフォローで最新情報をチェック"
-												: "Follow us on socials to stay updated onthe latest"}
-										</p>
+									<div>
+										<button
+											className="transform rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-3 py-1 text-[10px] tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
+											onClick={() => router.push("blogs/all")}
+										>
+											Explore more blogs
+										</button>
 									</div>
 								) : (
 									<></>
 								)}
+
+								<div className="flex w-full flex-col items-center justify-center gap-4 ">
+									<div className="flex items-center justify-center gap-4 text-lg text-black">
+										<Link
+											href="https://www.linkedin.com/company/somhakoo/"
+											target="_blank"
+											className="opacity-80 transition-opacity hover:opacity-100"
+										>
+											<i className="fa-brands fa-linkedin"></i>
+										</Link>
+										<Link
+											href="https://twitter.com/somhako"
+											target="_blank"
+											className="my-auto opacity-80 transition-opacity hover:opacity-100"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												height="1rem"
+												viewBox="0 0 512 512"
+												className="fill-black"
+											>
+												<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+											</svg>
+										</Link>
+										<Link
+											href="https://medium.com/@somhako"
+											target="_blank"
+											className="opacity-80 transition-opacity hover:opacity-100"
+										>
+											<i className="fa-brands fa-medium"></i>
+										</Link>
+										<Link
+											href="https://www.facebook.com/Somhako"
+											target="_blank"
+											className="opacity-80 transition-opacity hover:opacity-100"
+										>
+											<i className="fa-brands fa-facebook"></i>
+										</Link>
+									</div>
+									<p className="w-[80%] text-center text-3xl font-semibold tracking-[6.4px]">
+										{srcLang === "ja"
+											? "ソーシャルフォローで最新情報をチェック"
+											: "Follow us on socials to stay updated onthe latest"}
+									</p>
+								</div>
 
 								{poblogs &&
 									poblogs.length > 0 &&
@@ -309,25 +311,12 @@ export default function BlogsPage() {
 												<h3 className="w-[100%] truncate text-xl font-semibold text-gray-800 md:text-2xl">
 													{data.title}
 												</h3>
-												<Link href={"#"} target="_blank" className="text-[#2D129A] hover:underline">
+												<Link href={`/blogs/${data.slug}`} className="text-[#2D129A] hover:underline">
 													read more
 												</Link>
 											</div>
 										</div>
 									))}
-
-								{poblogs.length > 0 || publogs.length > 0 ? (
-									<div>
-										<button
-											className="transform rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-3 py-1 text-[10px] tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-											// onClick={() => setbookADemo(true)}
-										>
-											Explore more blogs
-										</button>
-									</div>
-								) : (
-									<></>
-								)}
 							</div>
 						</div>
 					</div>
