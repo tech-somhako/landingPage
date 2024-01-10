@@ -43,7 +43,7 @@ export default function BlogsPage() {
 
 	async function loadBlogs() {
 		await axiosInstance2
-			.get("blogs/blog/")
+			.get("admin/fetch-all-blogs/")
 			.then((response) => {
 				console.log("!!!!", "loadBlogs response", response.data);
 				setblogs(response.data);
