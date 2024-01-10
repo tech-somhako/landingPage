@@ -110,7 +110,7 @@ export default function noAuthHeader({ scrollTop, setbookADemo }: any) {
 								`${router.route.includes("/blogs") ? "menu__link2" : "menu__link"}`
 							}
 						>
-							{srcLang === "ja" ? "ブログ" : "Blogs"}
+							{srcLang != "ja" ? "Blogs" : "ブログ"}
 						</Link>
 						<div className="ml-[4rem]  max-lg:ml-0 max-lg:mt-[4rem] max-lg:flex max-lg:w-full max-lg:justify-center">
 							<button
