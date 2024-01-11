@@ -14,6 +14,7 @@ import { useLangStore } from "@/utils/code";
 import BookADemo from "@/components/noAuth/BookADemo";
 import { useRouter } from "next/router";
 import moment from "moment";
+import jsonData from "../../../public/blogs.json";
 
 export default function BlogsPage() {
 	const srcLang = useLangStore((state: { lang: any }) => state.lang);
@@ -70,19 +71,56 @@ export default function BlogsPage() {
 			});
 	}
 
+	// const fetchData = async () => {
+	// 	const response = await fetch("/api/blogData");
+	// 	const data = await response.json();
+	// 	console.log("data", data);
+	// };
+
+	// const saveData = async () => {
+	// 	const response = await fetch("/api/blogData", {
+	// 		method: "POST",
+	// 		headers: {
+	// 			"Content-Type": "application/json"
+	// 		}
+	// 	});
+	// 	const data = await response.json();
+	// 	console.log("post", data);
+	// };
+
+	// fetchData();
+	// saveData();
+	// console.log("abc", jsonData);
+
+	// console.log(
+	// 	"abcd",
+	// 	jsonData.filter((item) => console.log(item))
+	// );
 	return (
 		<>
 			<Head>
 				<title>Blog - {blogDetail.title}</title>
 				<meta
 					name="description"
-					content={blogDetail.title ? blogDetail.meta_description : "dummy description"}
+					content={jsonData
+						.filter((item) => item.slug === slug)
+						.map((item) => item.meta_description)
+						.toString()}
 					key="desc"
 				/>
-				<meta property="og:title" content={blogDetail.title ? blogDetail.meta_title : "dummy title"} />
+				<meta
+					property="og:title"
+					content={jsonData
+						.filter((item) => item.slug === slug)
+						.map((item) => item.meta_title)
+						.toString()}
+				/>
 				<meta
 					property="og:description"
-					content={blogDetail.title ? blogDetail.meta_description : "dummy description"}
+					content={jsonData
+						.filter((item) => item.slug === slug)
+						.map((item) => item.meta_description)
+						.toString()}
 				/>
 				<script
 					async
@@ -100,7 +138,13 @@ export default function BlogsPage() {
 				`
 					}}
 				/>
-				<meta name="keywords" content={blogDetail.keywords ? blogDetail.keywords.join() : ""} />
+				<meta
+					name="keywords"
+					content={jsonData
+						.filter((item) => item.slug === slug)
+						.map((item) => item.keywords)
+						.join()}
+				/>
 				<meta name="author" content="somhako" />
 			</Head>
 			<main>

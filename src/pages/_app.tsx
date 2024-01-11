@@ -58,36 +58,36 @@ function App({ Component, pageProps: { session, ...pageProps } }: any) {
 
 						{/* <meta name='keywords' content='your, tags' /> */}
 
-						<meta
+						{/* <meta
 							name="description"
 							content={
 								srcLang === "ja"
 									? "Somhako（ソムハコ）は、採用担当者に寄り添うAI型採用プラットフォームです。採用担当者のことを考えた次世代型採用管理システム（ATS）で業務の効率化や負荷軽減を体験してください。Somhako（ソムハコ）は、人材採用に特化し開発したAIが採用業務の自動化、対話型AIによる業務サポート、きめ細やかなサポートを提供します。"
 									: "Somhako is an AI-based recruiting platform that is close to recruiters. Somhako is an AI-driven recruiting platform that is designed with the recruiter in mind, providing automated recruiting operations, interactive AI support, and detailed support."
 							}
-						/>
+						/> */}
 
-						<meta
+						{/* <meta
 							name="subject"
 							content={
 								srcLang === "ja"
 									? "AI型採用管理システム「Somhako(ソムハコ)」"
 									: 'AI-based Recruitment Management System "Somhako”'
 							}
-						/>
+						/> */}
 
 						<meta name="copyright" content="Somhako" />
 
 						<meta name="language" content={srcLang} />
 
-						<meta
+						{/* <meta
 							name="og:title"
 							content={
 								srcLang === "ja"
 									? "AI型採用管理システム「Somhako(ソムハコ)」"
 									: 'AI-based Recruitment Management System "Somhako”'
 							}
-						/>
+						/> */}
 
 						<meta name="og:type" content="website" />
 
@@ -97,20 +97,20 @@ function App({ Component, pageProps: { session, ...pageProps } }: any) {
 
 						<meta name="og:site_name" content="Somhako" />
 
-						<meta
+						{/* <meta
 							name="og:description"
 							content={
 								srcLang === "ja"
 									? "Somhako（ソムハコ）は、採用担当者に寄り添うAI型採用プラットフォームです。採用担当者のことを考えた次世代型採用管理システム（ATS）で業務の効率化や負荷軽減を体験してください。Somhako（ソムハコ）は、人材採用に特化し開発したAIが採用業務の自動化、対話型AIによる業務サポート、きめ細やかなサポートを提供します。"
 									: "Somhako is an AI-based recruiting platform that is close to recruiters. Somhako is an AI-driven recruiting platform that is designed with the recruiter in mind, providing automated recruiting operations, interactive AI support, and detailed support."
 							}
-						/>
+						/> */}
 
-						<title>
+						{/* <title>
 							{srcLang === "ja"
 								? "AI型採用管理システム「Somhako(ソムハコ)」"
 								: 'AI-based Recruitment Management System "Somhako”'}
-						</title>
+						</title> */}
 					</Head>
 					<Component {...pageProps} />
 					{/* <GoogleTagManager gtmId="GTM-MH7C7N6L" /> */}

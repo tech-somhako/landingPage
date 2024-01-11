@@ -9,6 +9,7 @@ import novusS1 from "public/images/noAuth/novusS1.png";
 import { useTranslation } from "react-i18next";
 import ToggleLang from "@/components/noAuth/ToggleLang";
 import BookADemo from "@/components/noAuth/BookADemo";
+import { useLangStore } from "@/utils/code";
 
 export default function Values() {
 	const [scrollTop, setScrollTop] = useState(0);
@@ -23,6 +24,7 @@ export default function Values() {
 
 	const { t } = useTranslation("common");
 	const [bookADemo, setbookADemo] = useState(false);
+	const srcLang = useLangStore((state: { lang: any }) => state.lang);
 
 	return (
 		<>
@@ -43,6 +45,32 @@ export default function Values() {
 				});
 				`
 					}}
+				/>
+				<meta
+					name="og:description"
+					content={
+						srcLang === "ja"
+							? "Somhako（ソムハコ）は、採用担当者に寄り添うAI型採用プラットフォームです。採用担当者のことを考えた次世代型採用管理システム（ATS）で業務の効率化や負荷軽減を体験してください。Somhako（ソムハコ）は、人材採用に特化し開発したAIが採用業務の自動化、対話型AIによる業務サポート、きめ細やかなサポートを提供します。"
+							: "Somhako is an AI-based recruiting platform that is close to recruiters. Somhako is an AI-driven recruiting platform that is designed with the recruiter in mind, providing automated recruiting operations, interactive AI support, and detailed support."
+					}
+				/>
+
+				<meta
+					name="og:title"
+					content={
+						srcLang === "ja"
+							? "AI型採用管理システム「Somhako(ソムハコ)」"
+							: 'AI-based Recruitment Management System "Somhako”'
+					}
+				/>
+
+				<meta
+					name="description"
+					content={
+						srcLang === "ja"
+							? "Somhako（ソムハコ）は、採用担当者に寄り添うAI型採用プラットフォームです。採用担当者のことを考えた次世代型採用管理システム（ATS）で業務の効率化や負荷軽減を体験してください。Somhako（ソムハコ）は、人材採用に特化し開発したAIが採用業務の自動化、対話型AIによる業務サポート、きめ細やかなサポートを提供します。"
+							: "Somhako is an AI-based recruiting platform that is close to recruiters. Somhako is an AI-driven recruiting platform that is designed with the recruiter in mind, providing automated recruiting operations, interactive AI support, and detailed support."
+					}
 				/>
 			</Head>
 			<main>
