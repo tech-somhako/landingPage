@@ -100,6 +100,8 @@ export default function BlogsPage() {
 				`
 					}}
 				/>
+				<meta name="keywords" content={blogDetail.keywords ? blogDetail.keywords.join() : ""} />
+				<meta name="author" content="somhako" />
 			</Head>
 			<main>
 				<NoAuthHeader scrollTop={scrollTop} setbookADemo={setbookADemo} />
