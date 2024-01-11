@@ -13,10 +13,10 @@ export default async function handler(req, res) {
 	} else if (req.method === "POST") {
 		try {
 			const response = await fetch("https://atsapi.somhako.com/api/admin/specific-blogs-list/", {
-				method: "GET"
-				// headers: {
-				//   'Content-Type': 'application/json'
-				// },
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json"
+				}
 				// body: JSON.stringify({ name: "Lorenzo", email: "lo@lorenzozar.com" })
 			});
 			const data = await response.json();
