@@ -58,7 +58,7 @@ export default function BlogsPage() {
 
 	async function loadBlogDetail(slug: any) {
 		await axiosInstance2
-			.get(`admin/fetch-blog-detail//${slug}/`)
+			.get(`admin/fetch-blog-detail/${slug}/`)
 			.then((response) => {
 				console.log("!!!!", "loadBlogDetail response", response.data);
 				setblogDetail(response.data);
