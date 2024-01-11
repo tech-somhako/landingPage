@@ -58,7 +58,7 @@ export default function BlogsPage() {
 
 	async function loadBlogDetail(slug: any) {
 		await axiosInstance2
-			.get(`blogs/blog/${slug}/`)
+			.get(`admin/fetch-blog-detail//${slug}/`)
 			.then((response) => {
 				console.log("!!!!", "loadBlogDetail response", response.data);
 				setblogDetail(response.data);
@@ -100,6 +100,8 @@ export default function BlogsPage() {
 				`
 					}}
 				/>
+				<meta name="keywords" content={blogDetail.keywords ? blogDetail.keywords.join() : ""} />
+				<meta name="author" content="somhako" />
 			</Head>
 			<main>
 				<NoAuthHeader scrollTop={scrollTop} setbookADemo={setbookADemo} />

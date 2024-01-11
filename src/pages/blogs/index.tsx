@@ -47,7 +47,7 @@ export default function BlogsPage() {
 
 	async function loadProductUpdateBlogs() {
 		await axiosInstance2
-			.get("blogs/product-update/")
+			.get("admin/fetch-product-updates-blogs/")
 			.then((response) => {
 				console.log("!!!!", "loadProductUpdateBlogs response", response.data);
 				setpublogs(response.data);
@@ -60,7 +60,7 @@ export default function BlogsPage() {
 
 	async function loadProductOtherBlogs() {
 		await axiosInstance2
-			.get("blogs/other/")
+			.get("admin/fetch-other-blogs/")
 			.then((response) => {
 				console.log("!!!!", "loadProductOtherBlogs response", response.data);
 				setpoblogs(response.data);
