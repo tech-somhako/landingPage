@@ -99,7 +99,13 @@ export default function BlogsPage() {
 	return (
 		<>
 			<Head>
-				<title>Blog - {blogDetail.title}</title>
+				<title>
+					Blog -
+					{jsonData
+						.filter((item) => item.slug === slug)
+						.map((item) => item.title)
+						.toString()}
+				</title>
 				<meta
 					name="description"
 					content={jsonData
