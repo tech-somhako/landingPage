@@ -202,7 +202,10 @@ export default function LandingPage() {
 												<div className=" flex flex-row items-center justify-start max-xl:justify-center max-md:justify-center max-md:gap-4 max-sm:flex-col">
 													<button
 														className="transform rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-														onClick={() => setbookADemo(true)}
+														// onClick={() => setbookADemo(true)}
+														onClick={() => {
+															window.location.href = `https://ats.somhako.com/${srcLang}/auth/signup`;
+														}}
 													>
 														{t("Noauth.home.btn1")}
 													</button>
