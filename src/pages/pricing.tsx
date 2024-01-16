@@ -115,7 +115,10 @@ export default function PricingPage() {
 									<div className="mx-auto">
 										<button
 											className="transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-											onClick={() => setbookADemo(true)}
+											// onClick={() => setbookADemo(true)}
+											onClick={() => {
+												window.location.href = `https://ats.somhako.com/${srcLang}/auth/signup`;
+											}}
 										>
 											{srcLang === "ja" ? "無料トライアルを開始する" : "Start your FREE trial"}
 										</button>
@@ -176,7 +179,10 @@ export default function PricingPage() {
 											</ul>
 											<button
 												className="w-full transform rounded-normal bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 tracking-wide text-white shadow-lg transition-all duration-500 ease-in-out hover:scale-110 hover:animate-pulse hover:from-blue-600 hover:to-blue-800 hover:brightness-110 active:animate-bounce"
-												onClick={() => setbookADemo(true)}
+												// onClick={() => setbookADemo(true)}
+												onClick={() => {
+													window.location.href = `https://ats.somhako.com/${srcLang}/auth/signup`;
+												}}
 											>
 												Take a free trial
 											</button>
