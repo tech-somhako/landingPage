@@ -254,7 +254,7 @@ export default function PricingPage() {
 											<p className="mb-4 text-2xl font-bold">Custom</p>
 											<p className="mb-6">Get max efficiency</p>
 											<ul className="mb-6">
-												<li>No any limit</li>
+												<li>No limit</li>
 												<li>AI Based TA opeations</li>
 												<li>Reduce recruitment TAT</li>
 											</ul>
