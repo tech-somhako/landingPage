@@ -124,7 +124,7 @@ export default function Faq({ t }: any) {
 				)}
 			</div>
 
-			<div className="rounded-[1vw] border-b-2 border-blue-700 p-2 text-blue-700 max-md:rounded-[2vw] max-md:p-0">
+			{/* <div className="rounded-[1vw] border-b-2 border-blue-700 p-2 text-blue-700 max-md:rounded-[2vw] max-md:p-0">
 				<button
 					className="flex w-full items-center gap-4 rounded-lg p-2 text-left text-[1vw] font-medium text-blue-700 max-xl:py-0 max-xl:text-[1.5vw] max-md:text-[2vw]"
 					onClick={() => handleClick(setopen7, !open7)}
@@ -139,7 +139,7 @@ export default function Faq({ t }: any) {
 						{t("Noauth.home.text68")}
 					</div>
 				)}
-			</div>
+			</div> */}
 		</div>
 	);
 }
