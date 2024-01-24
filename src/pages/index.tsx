@@ -86,21 +86,21 @@ export default function LandingPage() {
 	const router = useRouter();
 	const srcLang = useLangStore((state: { lang: any }) => state.lang);
 
-	const saveData = async () => {
-		const response = await fetch("/api/blogData", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			}
-		});
-		const data = await response.json();
-		console.log("post", data);
-	};
+	// const saveData = async () => {
+	// 	const response = await fetch("/api/blogData", {
+	// 		method: "POST",
+	// 		headers: {
+	// 			"Content-Type": "application/json"
+	// 		}
+	// 	});
+	// 	const data = await response.json();
+	// 	console.log("post", data);
+	// };
 
-	useEffect(() => {
-		console.log("@@@", "funcalled");
-		saveData();
-	}, []);
+	// useEffect(() => {
+	// 	console.log("@@@", "funcalled");
+	// 	saveData();
+	// }, []);
 
 	return (
 		<>
