@@ -124,7 +124,7 @@ export default function BlogsPage() {
 																window.open(data.link, "_blank");
 															}}
 														>
-															<div className="h-auto w-[40%] max-md:w-full">
+															{/* <div className="h-auto w-[40%] max-md:w-full">
 																<Image
 																	src={data.thumbnail}
 																	alt="why"
@@ -132,9 +132,9 @@ export default function BlogsPage() {
 																	height={500}
 																	className="ml-auto h-[20vh] w-full object-cover max-md:mx-auto max-md:h-full"
 																/>
-															</div>
+															</div> */}
 
-															<div className="flex h-full w-[60%] flex-col space-y-2 bg-white p-3 max-md:w-full">
+															<div className="flex h-full w-[100%] flex-col space-y-2 bg-white p-3 max-md:w-full">
 																<h3 className="w-[100%] truncate text-xl font-semibold text-gray-800 md:text-2xl">
 																	{data.title}
 																</h3>
@@ -204,7 +204,7 @@ export default function BlogsPage() {
 													window.open(data.link, "_blank");
 												}}
 											>
-												<div className="h-auto w-[40%] max-md:w-full">
+												{/* <div className="h-auto w-[40%] max-md:w-full">
 													<Image
 														src={data.thumbnail}
 														alt="why"
@@ -212,9 +212,9 @@ export default function BlogsPage() {
 														height={500}
 														className="ml-auto h-[30vh] w-full object-cover max-md:mx-auto max-md:h-full"
 													/>
-												</div>
+												</div> */}
 
-												<div className="flex h-full w-[60%] flex-col space-y-2 bg-white p-3 max-md:w-full">
+												<div className="flex h-full w-[100%] flex-col space-y-2 bg-white p-3 max-md:w-full">
 													{/* <div className="item-center flex justify-between">
 													<p className="hidden font-medium text-gray-500 md:block">Vacations</p>
 													<div className="flex items-center">
